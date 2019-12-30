@@ -38,7 +38,7 @@ def run_inference_for_single_image(image, graph):
 
 for num_images in range(5, 121, 5):
     t = time.time()
-    images = np.array([cv2.imread("images/"+file) for file in os.listdir("images/")[:num_images]])
+    images = np.array([cv2.imread("images/"+file) for file in (os.listdir("images/")*10)[:num_images]])
     print("{} seconds for loading images with shape {}".format(time.time() - t, images.shape))
 
     t = time.time()
